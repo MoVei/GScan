@@ -216,7 +216,7 @@ def mkfile():
     # 判断日志目录是否存在，不存在则创建日志目录
     if not os.path.exists(SYS_PATH + '/log/'): os.mkdir(SYS_PATH + '/log/')
     if not os.path.exists(SYS_PATH + '/db/'): os.mkdir(SYS_PATH + '/db/')
-    # 判断日志文件是否存在，不存在则创建,存在则情况
+    # 判断日志文件是否存在，不存在则创建,存在则清空
     f = open(LOG_PATH, "w")
     f.truncate()
     f.close()
